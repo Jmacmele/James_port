@@ -10,16 +10,27 @@ html {
 }
 
 body {
-    background: #10f7e9;
-    color: #fff;
+    background-color:#E3F4FC;
+    color: black;
+}
+.header1{
+    background-color:#A8DADC;
+    height: 10vh;
+    
+}
+.header1 h1{
+    padding-top: 5px;
+    text-align: center;
+}
+.header{
+    text-align: center;
+    margin-top: 5%;
 }
 
-#header {
-    width: 100%;
-    height: 100vh;
-    background-image: url("makomele3.PNG");
-    background-size: cover;
-    background-position: center;
+.header img{
+    width: 300px; 
+    height: 300px;
+    border-radius: 50%;
     
 }
 
@@ -96,7 +107,7 @@ nav ul li {
 }
 
     nav ul li a {
-        color: #fff;
+        color: black;
         text-decoration: none;
         margin: 10px 20px;
         position: relative;
@@ -120,16 +131,14 @@ nav ul li {
 
 
 .header-text {
-    margin-top: 20%;
-    font-size: 10px;
+    margin-top: 7%;
+    font-size: 15px;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
+    text-align: center;
 }
 
-.header-text {
-    margin-top: 20%;
-    font-size: 15px;
-}
+
 
     .header-text h1 span {
         color: #ff004f;
@@ -165,7 +174,7 @@ nav ul li {
     .subtitle {
         font-size: 60px;
         font-weight: 600;
-        color: #fff;
+        color: black;
     }
 
 .tab-titles {
@@ -226,7 +235,7 @@ nav ul li {
 }
 
     .services-list div {
-        background: #262626;
+        background: #A8DADC;
         padding: 40px;
         font-size: 13px;
         font-weight: 300;
@@ -245,6 +254,7 @@ nav ul li {
             color:rgba(0,0,0,0.6);
             box-shadow:0 0 20px #61b752;
         }
+        
 
 
 
@@ -321,6 +331,9 @@ nav ul li {
         font-weight: 500;
         margin-bottom: 20px;
     }
+    .layer p{
+        color: white;
+    }
 
 .work:hover img {
     transform: scale(1.1);
@@ -334,19 +347,20 @@ nav ul li {
    display:block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: black;
     transition: all 0.5s;
+    background-color: #A8DADC;
 }
 
     .btn:hover {
-        background: #ff004f;
-        box-shadow:0 0 5px #ff004f,
-            0 0 25px #ff004f,0 0 50px #ff004f,
-            0 0 100px #ff004f, 0 0 200px #ff004f;
+        background: #457B9D;
+        box-shadow:0 0 5px #457B9D,
+            0 0 25px #457B9D,0 0 50px #457B9D,
+            0 0 100px #457B9D, 0 0 200px #457B9D;
     }
 
 #contact {
@@ -396,7 +410,7 @@ nav ul li {
 
 .btn.btn2 {
     display: inline-block;
-    background: #ff004f;
+    background: #A8DADC;
 }
 
 .contact-right form {
@@ -433,51 +447,62 @@ form .btn2 {
 nav .fas{
     display:none;
 }
-
+.item {
+    background-color: #A8DADC;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 200px;
+    max-width: 200px;
+}
+.item p {
+    margin: 10px 0;
+    color:#000000;
+    font-size: 15px;
+    font-weight: bold;
+}
 
 .Lead{
-font-size: 20px;
+font-size: 18px;
+text-align: center;
+margin-top: 5%;
 
 }
 .capstone-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
 }
 .butn{
     display: inline-block;
-    background: #ff004f;
+    background: #E76F51;
     padding: 14px 60px;
     font-size: 10px;
     margin-top: 20px;
     cursor: pointer;
-}
-.capstone-list p{
-    color:#000000;
-    font-size: 10px;
-    font-weight: bold;
+    color: white;
 }
 
+
 .video-container {
-    max-width: 80%;
+    max-width: 20%;
     height:40vh;
     border-radius: 10px;
     overflow: hidden;
 }
   @media  screen and (max-width: 760px){
 
-    #header {
-        width: 100%;
-        height: 100vh;
-        background-image: url("respond.PNG");
-        background-size:cover;
-        background-position: right;
-        
+    
+ .caption-list{
+flex-direction: column;
+align-items: center;
     }
 
     .header-text {
-        margin-top: 100%;
+        margin-top: 10%;
         font-size: 25px;
     }
 
@@ -492,23 +517,25 @@ font-size: 20px;
     }
 
     .sidemenu ul {
-        background: #ff004f;
+        background: #A8DADC;
         position: fixed;
         top: 0;
-        right: -15%;
+        right: -15px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
-        transition: right 0.5s;
-        transform: translateX(100%);
-        z-index: 50;
+        transition: right 0.5s ease-in-out,visibility 0.5s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    
         
     }
     
     .show ul{
-        transform: translateX(-0%);
-
+    right: 0;
+    visibility: visible;
+    opacity: 1;
     
     }
     
